@@ -3,7 +3,7 @@ import RegisterDocentes from "../controller/RegisterDocentesController.js"
 
 const router = express.Router();
 router.route("/")
-.post(RegisterDocentes.insertEstudiante)
+.post(RegisterDocentes.insertDocentes)
 
 router.route("/verifyCode")
 .post(RegisterDocentes.verifyCode)

@@ -33,7 +33,7 @@ const EstudianteSchema = new Schema({
         type: Boolean
     },
     loginAttemps: {
-        type: Boolean
+        type: Number
     },
     timeOut: {
         type: Date

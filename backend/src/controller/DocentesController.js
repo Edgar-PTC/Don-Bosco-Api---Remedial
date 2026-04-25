@@ -41,11 +41,11 @@ DocentesController.updateDocentes = async (req, res) => {
             return res.status(400).json({message: "name too short"})
         }
 
-        if(lastname.lenght < 3){
+        if(lastName.lenght < 3){
             return res.status(400).json({message: "lastname too short"})
         }
 
-        const updateDocentes = await Docentes.findByIdAndUpdate(req.params.id, { name, lastName, email, isActive, isVerified, loginAttemps, timeOut })
+        const updateDocentes = await Docentes.findByIdAndUpdate(req.params.id, { name, lastName, email, isActive, isVerified, loginAttemps, timeOut }, { new: true });
 
         if(!updateDocentes) {
             return res.status(400).json({message: "Docente not found"});
